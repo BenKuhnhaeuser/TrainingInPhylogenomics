@@ -1,6 +1,6 @@
 # Documentation for training in phylogenomics
  
-This repository aims to serve as a starting point for learning how perform various phylogenomic analyses, especially how to estimate species trees from sequence data.
+This repository aims to serve as a starting point for learning how to perform various phylogenomic analyses, especially how to estimate species trees from sequence data.
 
 Some Background for this analysis is given including brief introductions to some computing subjects, links to existing tutorials, including those compiled by people at Kew and useful Linux commands for running programs and analysing the outputs. The focus is on the generation of trees for angiosperm plants (but the methods can be used for other organisms. Hello fungal people.)
 
@@ -30,7 +30,8 @@ If you would like to contribute content to this repository please contact an exi
   * Angiosperms353 - or section on existing tree resources incl Explorer
 ]
 * Preforming the analysis - any online tools for estimating a species tree?
-### Context references
+### 
+References
 * A recent review paper on phylogenomics
 * Johnson et al target capture paper and Angios353 paper
 
@@ -41,7 +42,7 @@ This workflow is discussed briefly in six sections below but consists of two maj
 * **step 1:** assembly of gene sequences from samples
 * **step 2** organising sequences into gene sets, aligning the genes and  using the alignments to estimate a species tree
 
-It is assumed that target capture data is being used and available in the form of Illumina short pair end reads. At the end of this section, there are links to existing more detailed documentation on how to run the programs. Following this section there a some details on computing requirements and a section that summarizes the commands required for a complete analysis.
+It is assumed that target capture data is being used and available in the form of Illumina short pair end reads. At the end of this section, there are links to existing more detailed documentation on how to run the programs. Following this section there are some details on computing requirements and a section that summarizes the commands required for a complete analysis.
 
 ### Sequencing data quality checks
 * Adaptor trimming
@@ -49,7 +50,7 @@ It is assumed that target capture data is being used and available in the form o
 * Trimmomatic tool
 * FASTQC
 
-**_Outputs_** and **_Interpretation_**
+**_Outputs_**     (and **_Interpretation_**)
 * Trimmomatic output - expected % retained pair end and single end reads; single can also be used in HybPiper (can be 7% of total reads).
 * 
 **_Go further_**
@@ -65,7 +66,7 @@ REWORK THIS
 * Organising sequences into gene sets
 * Output DNA sequences should be in frame
 
-**_Outputs_** and **_Interpretation_**
+**_Outputs_**    (and **_Interpretation_**)
 
 **_Go further_**
 * Captus software (?)
@@ -73,7 +74,7 @@ REWORK THIS
 ### Alignment of genes from samples
 Intro - Various easy to use alignment programs exist - recommended ones: MAFFT, UPP for large alignments
 
-**_Outputs_** and **_Interpretation_**
+**_Outputs_** (and **_Interpretation_**)
 * Assessment: AMAS summary
 * Filtering tools: AMAS, Trimal
 * Removal of long branches with TreeShrink
@@ -89,7 +90,7 @@ Intro:
     * recommended program options e.g. IQTREE Ultrafastbootstrap
 * Virtues of each one: speed, ease of use, documentation
 
-**_Outputs_** and **_Interpretation_**
+**_Outputs_** (and **_Interpretation_**)
 * Newick file format and manipulation of
 * Assessment: support values
 * Adding taxonomy and visualisation
@@ -110,6 +111,7 @@ Intro - choice of program: ASTRAL
 * intro to incongruence
 * other programs to investigate e.g. ASTRAL-MP, ASTRAL-Pro
 
+**_Detailed workflows online_**
 The following links to tutorials go into further details about processing read data and estimating trees. Some additional computing knowledge required and is  discussed in the next section.
 
 * Sidonie's workflow
@@ -117,11 +119,11 @@ The following links to tutorials go into further details about processing read d
 * PAFTOL Explorer workflow
 *   
 
-### Workflow outline references
+### References
 *** 
 
 ## Computing requirements and software
-It is very likely that phylogenic analysis will require use of high performance computing due to the hundreds of genes used, unless the number of samples being compared is very small e.g. under 20)
+It is very likely that phylogenic analysis will require use of high performance computing due to the hundreds of genes used, unless the number of samples being compared is very small e.g. under 20). Therefore some computing expertise is required     
 
 
 ### Courses
@@ -149,9 +151,9 @@ This section is a very short summary of the commands required for a complete ana
 
 
 ## Contributors
-Ben
-Sidonie
-Paul B
+Paul Bailey
+Sidonie Bellot
+Ben Kuhnhaeuser
 
 ## Guide To contributors
 * Need to think how the document(s) can be modified. Is it best to transfer agreed tracked changes from e.g. a Google doc?
