@@ -30,8 +30,8 @@ If you would like to contribute content to this repository please contact an exi
   * Angiosperms353 - or section on existing tree resources incl Explorer
 ]
 * Preforming the analysis - any online tools for estimating a species tree?
-### 
-References
+
+### References
 * A recent review paper on phylogenomics
 * Johnson et al target capture paper and Angios353 paper
 
@@ -42,7 +42,7 @@ This workflow is discussed briefly in six sections below but consists of two maj
 * **step 1:** assembly of gene sequences from samples
 * **step 2** organising sequences into gene sets, aligning the genes and  using the alignments to estimate a species tree
 
-It is assumed that target capture data is being used and available in the form of Illumina short pair end reads. At the end of this section, there are links to existing more detailed documentation on how to run the programs. Following this section there are some details on computing requirements and a section that summarizes the commands required for a complete analysis.
+It is assumed that target capture data is being used and available in the form of Illumina short pair end reads in [fastq format](https://en.wikipedia.org/wiki/FASTQ_format). At the end of this section, there are links to existing more detailed documentation on how to run the programs. Following this section there are some details on computing requirements and a section that summarizes the commands required for a complete analysis.
 
 ### Sequencing data quality checks
 * Adaptor trimming
@@ -56,7 +56,10 @@ It is assumed that target capture data is being used and available in the form o
 **_Go further_**
   
 ### Sample and gene identifiers
-Some thought needs to be given to sample and gene names/identifiers before starting the analysis. It is also good to understand how these identifiers are used during the analysis. HybPiper has a novel (?) convention of using the following format for the fasta header in the reference fasta targets file: `>SampleName-GeneName`<br>
+Some thought needs to be given to sample and gene names/identifiers before starting the analysis. It is also good to understand how these identifiers are used during the analysis. HybPiper has a novel (?) convention of using the following format for the fasta header in the reference fasta targets file:
+```
+>SampleName-GeneName
+```
 with a dash between the sample and gene names. It is best that names should consist of alphanumerical characters only(1 - 9, A -Z, a - z) and underscore characters if required but certainly no dash characters or spaces. It is recommend ...
 REWORK THIS
 * The sample names should be simple alphanumerical identifiers during the analysis. Meanwhile a mapping file can be prepared to allow the species names to be swapped with the identifier
