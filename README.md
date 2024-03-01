@@ -20,6 +20,7 @@ If you would like to contribute content to this repository please contact an exi
   * NGS techniques - e.g.'s:
     * RAD-Seq
     * target capture of gene regions
+      * mention baits and enrichment  - requirement of short ( e.g 120bp) bait seqs designed against a subset of target genes selected from the genome
       * Various methods but recommend HybPiper (Johnson et al)
       * Requires a bait kit for enrichment and reference target sequences (Angios353)
       * Mention skimming is possible
@@ -55,7 +56,7 @@ It is assumed that target capture data is being used and available in the form o
 * 
 **_Go further_**
   
-### Sample and gene identifiers
+### Choice of sample and gene name
 Some thought needs to be given to sample and gene names/identifiers before starting the analysis. It is also good to understand how these identifiers are used during the analysis. HybPiper has a novel (?) convention of using the following format for the fasta header in the reference fasta targets file:
 ```
 >SampleName-GeneName
@@ -83,7 +84,7 @@ Intro - Various easy to use alignment programs exist - recommended ones: MAFFT, 
 * Removal of long branches with TreeShrink
 
 **_Go further_**
-* Concatenation --> species tree
+* Concatenation --> species tree (also see two sections below)
 * DNA aligned by protein sequence
 * Rogue taxon programs
 
@@ -110,11 +111,12 @@ Intro - choice of program: ASTRAL
 
 **_Go further_**
 
-* e.g. partitioning data with with RAxL-NG,
+* e.g. concatenation; partitioning data with with RAxL-NG; not as robust a method to ILS as ASTRAL summary method but gives you real branch lengths which might be of interest e.g. long branches that coincide with particular taxonomic levels (or not!) 
 * intro to incongruence
 * other programs to investigate e.g. ASTRAL-MP, ASTRAL-Pro
+* Tanglegrams
 
-**_Detailed workflows online_**
+### Detailed workflows online
 The following links to tutorials go into further details about processing read data and estimating trees. Some additional computing knowledge required and is  discussed in the next section.
 
 * Sidonie's workflow
@@ -154,12 +156,13 @@ This section is a very short summary of the commands required for a complete ana
 
 
 ## Contributors
-Paul Bailey
-Sidonie Bellot
-Ben Kuhnhaeuser
+* Paul Bailey
+* Sidonie Bellot
+* Ben Kuhnhaeuser
 
 ## Guide To contributors
 * Need to think how the document(s) can be modified. Is it best to transfer agreed tracked changes from e.g. a Google doc?
+  * Can edit online and leave a commit message with your name - there's even an extended message box to leave further info
 * The idea is the the content should be very succinct and to the point
 * Maybe contributors should meet occasionally to assess structure and agree new content
 * If the document grows significantly or new topics are included, could break out into several files
