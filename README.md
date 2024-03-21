@@ -1,13 +1,13 @@
 # Documentation for training in phylogenomics
  
-**Please note - this document is under development and only contains  outlines of sections being prepared**
+**Please note - this document is under development and only contains  outlines of the sections being prepared**
 
 This repository aims to serve as a starting point for learning how to perform various phylogenomic analyses. The focus is on the estimation of species trees for angiosperm plants (but the methods can be used for other organisms).
 
 
 The documentation is structured as follows:
 * [background](#Background) to performing these analyses
-* [workflow outline](#Workflow-outline) and discussion of the outputs obtained. Includes links to existing tutorials, including ones compiled by people at Kew
+* [workflow outline](#Workflow-outline) to estimate a species tree and discussion of the outputs obtained at each step. Includes links to existing tutorials, including ones compiled by people at Kew
 * [brief introductions to some computing subjects](#Computing-requirements-and-software) with links to existing tutorials, including those compiled by people at Kew, and how to run analysis software
 * [Skeleton workflow containing useful commands](#Skeleton-workflow-of-useful-commands)
 
@@ -207,13 +207,13 @@ The rest of this section summarizes handy commands for the following  computing 
 * Link to one or two more primers
 * awk
 
-### Slurm
+#### Slurm
 It is essential to be able to run analysis work (jobs) via the Slurm job scheduler. The links at the top of this computing section contain plenty of instructions on how to use Slurm. The following link describes how to run jobs using relevant examples of target capture data analysis (using HybPiper version 1.3 or HybPiper version 2) and generating gene alignments and phylogenetic trees:
   * https://github.com/sidonieB/Workflows/blob/main/Slurm_cheat_sheet.md
 
 The remainder of this section summarizes useful Slurm example commands that can be copy and pasted onto the command line. Text or values that must be edited before using the command are shown between '<' and '>' characters.
 
-### sinfo
+#### sinfo
 ```bash
 sinfo -o "%16P %.5a %.10l %8p %.6D %.6t %N %m" 
 ```
@@ -225,7 +225,7 @@ Output contains useful information you might want to consider before submitting 
 * list of node names in the queue 
 * maximum amount of memory (RAM) available in each node
 
-### sbatch
+#### sbatch
 One way of submitting a job to Slurm using the --wrap flag (useful for practice and testing)
 ```bash
 sbatch -J <jobName> -p long -c 1 -n 1  --mem=5000  -o <jobName>.log  -e <jobName>.err  --wrap  " <your command(s) here> ] " 
@@ -234,7 +234,7 @@ sbatch -J <jobName> -p long -c 1 -n 1  --mem=5000  -o <jobName>.log  -e <jobName
 * Note - if the following characters are used within the command, they need to be used with a backslash character: `  "  $  (i.e.  \'  \"  \$)
   * Variables from outside the script e.g. $variableName must be used without the backslash!
 
-### squeue
+#### squeue
 ```bash
 squeue -o "%.22i %.13P %.25j %.8u %.8T %.10M %.9l %.6D %.R %.C %.m %.p"
 ```
@@ -246,7 +246,7 @@ Output can be used to keep track of queued and running jobs e.g.:
 * how much memory (MIN_MEMORY) you requested
 * To see your jobs only add: -u $USER
 
-### scontrol
+#### scontrol
 If using Slurm arrays, to change the number of jobs to run in parallel:
 ```bash 
 scontrol update arraytaskthrottle=10 job=<jobId>
@@ -272,7 +272,7 @@ scontrol update TimeLimit=2-00:00:00  job=<jobId>
 Other scontrol update variables:
   * Partition
 
-### sacct
+#### sacct
 ```bash
 sacct -S 093023-09:00 --format=jobid,jobname%-25,start%16,end%16,Partition%13,elapsed,cputime,ncpus%3,ntasks%4=3,NodeList,AveVMSize,MaxRss%12,user%7,state,ExitCode  < | grep batch | grep [jobId]1226030\|1227326 | sort -k11n >
 ```
@@ -286,7 +286,7 @@ Output provides a table of information on the outcome of a job:
   * restricts output to job of interest
   * 'sort -k11n' sorts the output by the size of memory consumed; replace with sort -k5 to sort the time taken (Elapsed) (sorts correctly up to 9 days only!)
 
-### scancel
+#### scancel
 To cancel a job (array):
 ```bash
 scancel <jobId>
@@ -301,7 +301,7 @@ scancel {<jobId>..<jobid>}
 ```
   * ... but you probably should have used a Slurm job array instead
 
-### srun
+#### srun
 ```bash
 srun --cpus-per-task=1 --mem-per-cpu=2G --partition=himem --pty bash  
 ```
@@ -347,7 +347,7 @@ This section is a very concise summary of the commands required  for a complete 
 * Sidonie Bellot
 * Ben Kuhnhaeuser
 
-## Guide to contributors
+### Guide to contributors
 * Need to think how the document(s) can be modified. Is it best to transfer agreed tracked changes from e.g. a Google doc?
   * Can edit inGuitHub online and leave a commit message with your name - there's even an extended message box to leave further info - might be sufficient
 * The idea is the the content should be very succinct and to the point
