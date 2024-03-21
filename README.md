@@ -142,7 +142,7 @@ The following links to tutorials and workflows go into the practical details abo
 * [PhyloFrame](https://github.com/BenKuhnhaeuser/PhyloFrame) by Ben Kuhnhäuser - short list of relevant commands covering the same areas as Sidonie's workflow above
 * [Training and bioinformatics resources](https://www.genomicsforaustralianplants.com/gap-bioinformatics-resources/) from the [GAP phylogenomics project](https://www.genomicsforaustralianplants.com/phylogenomics) - contains:
   * links to their phylogenomic workflows
-  * [recommendations](linkhere) on data analysis to estimate a species tree
+  * [recommendations](https://www.genomicsforaustralianplants.com/wp-content/uploads/2022/02/2022-02-08-Bioinfo_WG_recommendations_v4_MLedit.pdf) on data analysis to estimate a species tree
   * bioinformatics webinars and workshops (with materials to try out)
 
 * [Kew internal training course in phylogenomics (November 2019)](https://github.com/baileyp1/PhylogenomicsTraining_Nov2019)
