@@ -207,7 +207,7 @@ The rest of this section summarizes handy commands for the following  computing 
 * Link to one or two more primers
 * awk
 
-#### Slurm
+### Slurm
 It is essential to be able to run analysis work (jobs) via the Slurm job scheduler. The links at the top of this computing section contain plenty of instructions on how to use Slurm. The following link describes how to run jobs using relevant examples of target capture data analysis (using HybPiper version 1.3 or HybPiper version 2) and generating gene alignments and phylogenetic trees:
   * https://github.com/sidonieB/Workflows/blob/main/Slurm_cheat_sheet.md
 
@@ -341,6 +341,7 @@ This section is a very concise summary of the commands required  for a complete 
 * then more detail from the gene alignment step onwards
     [yet to outline]
 
+***
 
 ## Contributors
 * Paul Bailey
